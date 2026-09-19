@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #10110e;
+  --color-panel: #181a15;
+  --color-line: #2c2f27;
+  --color-paper: #f3ead2;
+  --color-mute: #9a937c;
+  --color-hook: #f0b429;
+  --color-ok: #8fbf4d;
+  --color-danger: #e4572e;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+body {
+  background-image:
+    linear-gradient(180deg, rgb(16 17 14 / 0.2), rgb(16 17 14 / 0.92)),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 47px,
+      rgb(243 234 210 / 0.035) 47px,
+      rgb(243 234 210 / 0.035) 48px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 47px,
+      rgb(243 234 210 / 0.035) 47px,
+      rgb(243 234 210 / 0.035) 48px
+    );
+  min-height: 100vh;
+}

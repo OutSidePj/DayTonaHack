@@ -1,0 +1,16 @@
+{
+	email {$ACME_EMAIL}
+}
+
+# One wildcard cert for all preview hosts. DNS-01 via DNSimple.
+# Do not add on-demand TLS — that issues a cert per hostname and hits rate limits.
+*.{$PREVIEW_BASE_DOMAIN} {
+	tls {
+		dns dnsimple {
+			account_id {$DNSIMPLE_ACCOUNT_ID}
+			api_access_token {$DNSIMPLE_API_TOKEN}
+		}
+	}
+
+	reverse_proxy 127.0.0.1:8080
+}

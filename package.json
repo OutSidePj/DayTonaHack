@@ -1,0 +1,40 @@
+{
+  "name": "hoist",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "smoke:daytona": "tsx scripts/smoke-daytona.ts",
+    "dev:proxy": "pnpm --filter hoist-proxy dev",
+    "smoke:proxy": "tsx scripts/smoke-proxy.ts",
+    "demo:proxy": "tsx scripts/demo-proxy.ts",
+    "smoke:dnsimple": "tsx scripts/smoke-dnsimple.ts",
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "smoke:planner": "tsx scripts/smoke-planner.ts",
+    "warmup:nosana": "tsx scripts/warmup-nosana.ts",
+    "smoke:nosana": "tsx scripts/smoke-nosana.ts",
+    "reclaim": "tsx scripts/reclaim-sandboxes.ts"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0",
+    "@daytona/sdk": "^0.214.0",
+    "@supabase/supabase-js": "^2.116.0",
+    "dotenv": "^18.0.1",
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

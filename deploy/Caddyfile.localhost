@@ -1,0 +1,5 @@
+# Local dev: no DNS, no certs. The Node proxy already binds :8080.
+# Use this only if you want Caddy in front locally.
+http://*.localhost {
+	reverse_proxy 127.0.0.1:8080
+}
